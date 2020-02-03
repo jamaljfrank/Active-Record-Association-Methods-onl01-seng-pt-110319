@@ -10,7 +10,7 @@ class Song < ActiveRecord::Base
     # when this method is called it should assign the song's artist to Drake
     
     
-    if !self.artist
+    if self.artist.name
       drake = Artist.create(name: "Drake")
       self.artist = drake
     else 
