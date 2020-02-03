@@ -15,6 +15,7 @@ class Song < ActiveRecord::Base
     else 
       drake = Artist.create(name: "Drake")
       self.artist = drake
+    end
     
     
     # Drake doesn't exist in the database as an artist yet, so you'll have to create a record
