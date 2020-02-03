@@ -11,8 +11,10 @@ class Song < ActiveRecord::Base
     drake = Artist.create(name: "Drake")
     self.artist = drake
     
-    if drake.class == nil
-      
+    if drake.class == Artist
+      drake = Artist.create(name: "Drake")
+    self.artist = drake
+  else 
     
     
     # Drake doesn't exist in the database as an artist yet, so you'll have to create a record
