@@ -8,7 +8,7 @@ class Song < ActiveRecord::Base
 
   def drake_made_this
     # when this method is called it should assign the song's artist to Drake
-    if 
+    if self.artist.name.any? {|a| a.name == "Drake"
     
     
     # Drake doesn't exist in the database as an artist yet, so you'll have to create a record
